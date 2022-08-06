@@ -1,0 +1,5 @@
+*.rpx
+*.zip
+/build
+/out
+/tmp
