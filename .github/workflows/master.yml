@@ -35,5 +35,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: soh
-          path: soh.zip
+          path: out/*
           if-no-files-found: error

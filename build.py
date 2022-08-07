@@ -18,7 +18,9 @@ def checkAndDeleteDir(dir):
         print(f"Deleting {dir}")
         shutil.rmtree(dir)
 
-tmpArray = ["out", "tmp/code", "tmp/content"]
+checkAndDeleteDir("out")
+
+tmpArray = ["out/sohfw", "tmp/code", "tmp/content"]
 for path in tmpArray:
     os.makedirs(path)
 
@@ -31,7 +33,5 @@ for file in tmpArray:
 
 fp = open('tmp/content/dummy', 'x')
 fp.close()
-os.system(f"java -jar {nuspacker} -in tmp -out out")
+os.system(f"java -jar {nuspacker} -in tmp -out out/sohfw")
 shutil.rmtree("tmp")
-shutil.make_archive(f"soh", "zip", "out", ".")
-shutil.rmtree("out")
