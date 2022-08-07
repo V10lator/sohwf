@@ -28,7 +28,7 @@ os.system(f"make -j$(nproc)")
 shutil.copytree("meta", "tmp/meta")
 for root, dirs, files in os.walk("tmp/meta"):
     for file in files:
-        if file.endswith(“.xfc”):
+        if file.endswith(".xfc"):
             os.remove(os.path.join(root, file))
 
 tmpArray = ["soh.rpx", "tmp/meta/app.xml",  "tmp/meta/cos.xml"]
