@@ -29,7 +29,6 @@ shutil.copytree("meta", "tmp/meta")
 for root, dirs, files in os.walk("tmp/meta"):
     for file in files:
         if file.endswith(".xcf"):
-            print(os.path.join(root, file))
             os.remove(os.path.join(root, file))
 
 tmpArray = ["soh.rpx", "tmp/meta/app.xml",  "tmp/meta/cos.xml"]
