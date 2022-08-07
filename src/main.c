@@ -16,7 +16,9 @@ int main()
 				.path = "wiiu/apps/soh/soh.rpx",
 			};
 
-			Mocha_LaunchRPX(&info);
+			if(Mocha_LaunchRPX(&info) != MOCHA_RESULT_SUCCESS)
+				SYSLaunchMenu();
+
 			Mocha_DeinitLibrary();
 
 		}
